@@ -17,6 +17,8 @@
 		D03214AD1F3EBE0500F5B298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D03214AC1F3EBE0500F5B298 /* GoogleService-Info.plist */; };
 		D038D2821F4289040007CBA9 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2811F4289040007CBA9 /* ImageExtensions.swift */; };
 		D038D2841F4289940007CBA9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2831F4289940007CBA9 /* TextFieldExtensions.swift */; };
+		D038D2861F4293C30007CBA9 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2851F4293C30007CBA9 /* FBButton.swift */; };
+		D038D2891F4294380007CBA9 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2881F4294380007CBA9 /* Contants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		D03214AC1F3EBE0500F5B298 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D038D2811F4289040007CBA9 /* ImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		D038D2831F4289940007CBA9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
+		D038D2851F4293C30007CBA9 /* FBButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
+		D038D2881F4294380007CBA9 /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		D032148B1F3EB75E00F5B298 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D038D2871F42942C0007CBA9 /* Util */,
 				D03214B01F3EC27100F5B298 /* Model */,
 				D03214AF1F3EC26800F5B298 /* View */,
 				D03214AE1F3EC26000F5B298 /* Controller */,
@@ -123,8 +128,7 @@
 		D03214AF1F3EC26800F5B298 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D038D2811F4289040007CBA9 /* ImageExtensions.swift */,
-				D038D2831F4289940007CBA9 /* TextFieldExtensions.swift */,
+				D038D2851F4293C30007CBA9 /* FBButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -132,8 +136,18 @@
 		D03214B01F3EC27100F5B298 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D038D2811F4289040007CBA9 /* ImageExtensions.swift */,
+				D038D2831F4289940007CBA9 /* TextFieldExtensions.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D038D2871F42942C0007CBA9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D038D2881F4294380007CBA9 /* Contants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		DF49E6A974105E7ED5BCB73F /* Pods */ = {
@@ -313,7 +327,9 @@
 				D038D2821F4289040007CBA9 /* ImageExtensions.swift in Sources */,
 				D038D2841F4289940007CBA9 /* TextFieldExtensions.swift in Sources */,
 				D032148F1F3EB75E00F5B298 /* SignInVC.swift in Sources */,
+				D038D2861F4293C30007CBA9 /* FBButton.swift in Sources */,
 				D032148D1F3EB75E00F5B298 /* AppDelegate.swift in Sources */,
+				D038D2891F4294380007CBA9 /* Contants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
