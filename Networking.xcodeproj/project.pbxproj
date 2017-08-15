@@ -52,6 +52,7 @@
 		D038D2851F4293C30007CBA9 /* FBButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
 		D038D2881F4294380007CBA9 /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		D038D28E1F42B85B0007CBA9 /* NewAccVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAccVC.swift; sourceTree = "<group>"; };
+		D038D2901F42E9AF0007CBA9 /* Networking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Networking.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 		D032148B1F3EB75E00F5B298 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D038D2901F42E9AF0007CBA9 /* Networking.entitlements */,
 				D038D2871F42942C0007CBA9 /* Util */,
 				D03214B01F3EC27100F5B298 /* Model */,
 				D03214AF1F3EC26800F5B298 /* View */,
@@ -225,6 +227,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = A58859Q3MF;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					D032149C1F3EB75E00F5B298 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -475,6 +482,7 @@
 			baseConfigurationReference = C132AD9685ABB96EB2C8E72D /* Pods-Networking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Networking/Networking.entitlements;
 				DEVELOPMENT_TEAM = A58859Q3MF;
 				INFOPLIST_FILE = Networking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -489,6 +497,7 @@
 			baseConfigurationReference = CCBB5FC8AD8943197C6CE076 /* Pods-Networking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Networking/Networking.entitlements;
 				DEVELOPMENT_TEAM = A58859Q3MF;
 				INFOPLIST_FILE = Networking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
