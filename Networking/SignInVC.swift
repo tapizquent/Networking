@@ -52,6 +52,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         emailTextField.resignFirstResponder()
         passTextField.resignFirstResponder()
         
@@ -83,6 +84,18 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                 print("NOTE: Successfully Authenticated with Firebase")
             }
         })
+    }
+    
+    @IBAction func signInPressed(_ sender: Any) {
+        if let email = emailTextField.text, let pwd = passTextField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("NOTE: Account exists, user successfully authenticated w/ firebase EMAIL")
+                } else {
+                    print("NOTE(ERROR): User does not exists")
+                }
+            })
+        }
     }
 }
 
