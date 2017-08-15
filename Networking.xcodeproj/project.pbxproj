@@ -15,6 +15,8 @@
 		D03214971F3EB75E00F5B298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03214951F3EB75E00F5B298 /* LaunchScreen.storyboard */; };
 		D03214A21F3EB75E00F5B298 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03214A11F3EB75E00F5B298 /* NetworkingTests.swift */; };
 		D03214AD1F3EBE0500F5B298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D03214AC1F3EBE0500F5B298 /* GoogleService-Info.plist */; };
+		D038D2821F4289040007CBA9 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2811F4289040007CBA9 /* ImageExtensions.swift */; };
+		D038D2841F4289940007CBA9 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2831F4289940007CBA9 /* TextFieldExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		D03214A11F3EB75E00F5B298 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		D03214A31F3EB75E00F5B298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D03214AC1F3EBE0500F5B298 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D038D2811F4289040007CBA9 /* ImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
+		D038D2831F4289940007CBA9 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 		D03214AF1F3EC26800F5B298 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D038D2811F4289040007CBA9 /* ImageExtensions.swift */,
+				D038D2831F4289940007CBA9 /* TextFieldExtensions.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -304,6 +310,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D038D2821F4289040007CBA9 /* ImageExtensions.swift in Sources */,
+				D038D2841F4289940007CBA9 /* TextFieldExtensions.swift in Sources */,
 				D032148F1F3EB75E00F5B298 /* SignInVC.swift in Sources */,
 				D032148D1F3EB75E00F5B298 /* AppDelegate.swift in Sources */,
 			);
