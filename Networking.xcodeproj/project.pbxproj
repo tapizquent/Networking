@@ -20,6 +20,7 @@
 		D038D2861F4293C30007CBA9 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2851F4293C30007CBA9 /* FBButton.swift */; };
 		D038D2891F4294380007CBA9 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2881F4294380007CBA9 /* Contants.swift */; };
 		D038D28F1F42B85B0007CBA9 /* NewAccVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D28E1F42B85B0007CBA9 /* NewAccVC.swift */; };
+		D038D2981F43D0B10007CBA9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D038D2971F43D0B10007CBA9 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D038D2881F4294380007CBA9 /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		D038D28E1F42B85B0007CBA9 /* NewAccVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAccVC.swift; sourceTree = "<group>"; };
 		D038D2901F42E9AF0007CBA9 /* Networking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Networking.entitlements; sourceTree = "<group>"; };
+		D038D2971F43D0B10007CBA9 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				D032148E1F3EB75E00F5B298 /* SignInVC.swift */,
 				D038D28E1F42B85B0007CBA9 /* NewAccVC.swift */,
+				D038D2971F43D0B10007CBA9 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				D038D2821F4289040007CBA9 /* ImageExtensions.swift in Sources */,
 				D038D2841F4289940007CBA9 /* TextFieldExtensions.swift in Sources */,
 				D032148F1F3EB75E00F5B298 /* SignInVC.swift in Sources */,
+				D038D2981F43D0B10007CBA9 /* FeedVC.swift in Sources */,
 				D038D2861F4293C30007CBA9 /* FBButton.swift in Sources */,
 				D032148D1F3EB75E00F5B298 /* AppDelegate.swift in Sources */,
 				D038D2891F4294380007CBA9 /* Contants.swift in Sources */,

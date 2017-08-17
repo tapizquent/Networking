@@ -10,15 +10,13 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
-import GoogleSignIn
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
+class SignInVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
-    
-    @IBOutlet weak var GsignInButton: GIDSignInButton!
+    @IBOutlet weak var whiteSpace: UIView!
 
     @IBOutlet weak var emailIcon: UIImageView!
     @IBOutlet weak var passwordIcon: UIImageView!
@@ -30,12 +28,27 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
         self.emailTextField.delegate = self
         self.passTextField.delegate = self
         
-        GIDSignIn.sharedInstance().uiDelegate = self
-        //GIDSignIn.sharedInstance().signIn()
-        
         // TODO(developer) Configure the sign-in button look/feel
         // ...
-
+        if let currentUser = FIRAuth.auth()?.currentUser {
+            errorMsgLbl.isHidden = false
+            errorMsgLbl.text = currentUser.displayName
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let userSignedIn = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            DispatchQueue.main.async(){
+                
+                self.performSegue(withIdentifier: "openFeed", sender: nil)
+                
+            }
+            print("NOTE: User Signed In")
+            print("NOTE: \(userSignedIn)")
+            
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,12 +69,15 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
         
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        checkFieldEmpty()
+    }
+    
     // Hides keyboard when user taps return or outside textField
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)
         
-        checkFieldEmpty()
         
     }
     
@@ -90,6 +106,7 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
                 self.firebaseAuth(credential)
             }
         }
+        
     }
     
     func firebaseAuth(_ credential: FIRAuthCredential){
@@ -100,6 +117,11 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
                 print("NOTE: Successfully Authenticated with Firebase")
                 if let user = user {
                     KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
+                    DispatchQueue.main.async(){
+                        
+                        self.performSegue(withIdentifier: "openFeed", sender: nil)
+                        
+                    }
                 }
             }
         })
@@ -129,6 +151,17 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
             passTextField.placeholder = "Password can't be empty"
         }
     }
+    
+    func completeSignIn(id: String){
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        DispatchQueue.main.async(){
+            
+            self.performSegue(withIdentifier: "openFeed", sender: nil)
+            
+        }
+    }
+    
+    
 }
 
 

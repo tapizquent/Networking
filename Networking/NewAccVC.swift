@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class NewAccVC: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
@@ -53,7 +54,12 @@ class NewAccVC: UIViewController {
                         if error != nil {
                             print("NOTE(ERROR): Sorry account could not be created. Something went wrong")
                         } else {
-                            print("NOTE: User created successfully with email")
+                            if let user = user {
+                                print("NOTE: User created successfully with email")
+                                KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
+                               // performSegue(withIdentifier: "goToFeed", sender: nil)
+                            }
+                            
                             self.dismiss(animated: true)
                         }
                     })
