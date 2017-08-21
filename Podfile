@@ -13,5 +13,6 @@ target 'Networking' do
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
   pod 'GoogleSignIn'
+  pod 'GooglePlaces'
 
 end

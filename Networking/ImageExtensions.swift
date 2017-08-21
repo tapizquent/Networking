@@ -17,8 +17,9 @@ extension UIImageView {
         animation.duration = 0.6
         animation.values = [-10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
         layer.add(animation, forKey: "shake")
-        
-        
     }
     
+    
+    
 }
+

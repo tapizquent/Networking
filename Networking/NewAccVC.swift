@@ -57,7 +57,11 @@ class NewAccVC: UIViewController {
                             if let user = user {
                                 print("NOTE: User created successfully with email")
                                 KeychainWrapper.standard.set(user.uid, forKey: KEY_UID)
-                               // performSegue(withIdentifier: "goToFeed", sender: nil)
+                                //performSegue(withIdentifier: "goToFeed", sender: nil)
+                                _ = UIStoryboard(name: "Main", bundle: nil)
+                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
+                                //self.navigationController?.pushViewController(vc, animated: true)
+                                vc.performSegue(withIdentifier: "openFeed", sender: nil)
                             }
                             
                             self.dismiss(animated: true)

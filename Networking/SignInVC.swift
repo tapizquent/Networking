@@ -30,10 +30,6 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         
         // TODO(developer) Configure the sign-in button look/feel
         // ...
-        if let currentUser = FIRAuth.auth()?.currentUser {
-            errorMsgLbl.isHidden = false
-            errorMsgLbl.text = currentUser.displayName
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -104,6 +100,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
                 print("NOTE: Successfully Authenticated with Facebook")
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
+                //self.performSegue(withIdentifier: "openFeed", sender: nil)
             }
         }
         
